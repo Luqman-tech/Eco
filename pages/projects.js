@@ -36,22 +36,22 @@ function Home() {
             </a>
             <ul className="nav-menu">
               <li className="nav-item">
-                <a href="Index.html" className="nav-link">
+                <a href="Index.js" className="nav-link">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a href="About Us.html" className="nav-link">
+                <a href="About Us.js" className="nav-link">
                   About Us
                 </a>
               </li>
               <li className="nav-item">
-                <a href="Projects.html" className="nav-link">
+                <a href="Projects.js" className="nav-link">
                   Projects
                 </a>
               </li>
               <li className="nav-item">
-                <a href="Services.html" className="nav-link">
+                <a href="Services.js" className="nav-link">
                   Services
                 </a>
               </li>
@@ -61,7 +61,7 @@ function Home() {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="Contact Us.html" className="nav-link">
+                <a href="Contact Us.js className="nav-link">
                   Contact Us
                 </a>
               </li>
@@ -278,4 +278,4 @@ function Home() {
       </>
         )    
 }
-export default Projects
+export default Projects;
