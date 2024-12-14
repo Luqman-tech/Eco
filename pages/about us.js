@@ -42,33 +42,33 @@ function Home() {
       </a>
       <ul className="nav-menu">
         <li className="nav-item">
-          <a href="Index.html" className="nav-link">
+          <a href="index.js" className="nav-link">
             Home
           </a>
         </li>
         <li className="nav-item">
-          <a href="About Us.html" className="nav-link">
-            About Us
+          <a href="about us.js" className="nav-link">
+            About 
           </a>
         </li>
         <li className="nav-item">
-          <a href="Projects.html" className="nav-link">
+          <a href="projects.js" className="nav-link">
             Projects
           </a>
         </li>
         <li className="nav-item">
-          <a href="Services.html" className="nav-link">
+          <a href="services.js" className="nav-link">
             Services
           </a>
         </li>
         <li className="nav-item">
-          <a href="Blog.html" className="nav-link">
+          <a href="blog.js" className="nav-link">
             Blog
           </a>
         </li>
         <li className="nav-item">
-          <a href="Contact Us.html" className="nav-link">
-            Contact Us
+          <a href="contact us.js" className="nav-link">
+            Contact 
           </a>
         </li>
       </ul>
