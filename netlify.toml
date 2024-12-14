@@ -1,15 +1,36 @@
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-
 [build]
+  # Directory where the built site resides (e.g., for static site generators)
+  publish = "dist"
+  # Command to build your site (adjust as per your project's requirements)
   command = "npm run build"
-  publish = "out"
-  environment = { NODE_VERSION = "16" }
+  # Environment setup (optional, define NODE_VERSION or others here)
+  environment = { NODE_VERSION = "18" }
 
-[build.environment]
-CONTENTFUL_SPACE_ID = "your-space-id"
-CONTENTFUL_ENVIRONMENT = "preview"
-CONTENTFUL_PREVIEW_TOKEN = "your-preview-token"
-CONTENTFUL_MANAGEMENT_TOKEN = "your-management-token"
+[functions]
+  # Directory for Netlify Functions
+  directory = "functions"
+
+# Redirect all requests to index.html for single-page apps
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Netlify CMS Admin Path
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Headers for Netlify CMS and other assets
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;"
+
+# Redirects for API or external services (if any)
+[[redirects]]
+  from = "/api/*"
+  to = "https://external-api.example.com/:splat"
+  status = 200
