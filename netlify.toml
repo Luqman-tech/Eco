@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build & npm install"
+  command = "./netlify-build.sh"
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "18.18.0"
   NPM_FLAGS = "10"
 
 [[plugins]]
