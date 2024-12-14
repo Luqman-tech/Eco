@@ -236,4 +236,3 @@ function Home() {
 </>
         )    
 }
-export default Contact 
