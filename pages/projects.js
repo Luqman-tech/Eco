@@ -42,7 +42,7 @@ function Home() {
               </li>
               <li className="nav-item">
                 <a href="about Us.js" className="nav-link">
-                  About Us
+                  About 
                 </a>
               </li>
               <li className="nav-item">
@@ -62,7 +62,7 @@ function Home() {
               </li>
               <li className="nav-item">
                 <a href="contact Us.js className="nav-link">
-                  Contact Us
+                  Contact 
                 </a>
               </li>
             </ul>
