@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [build]
   command = "bash ./netlify-build.sh"
   publish = ".next"
@@ -21,7 +21,6 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-=======
 [build]
   command = "bash ./netlify-build.sh"
   publish = ".next"
@@ -42,5 +41,5 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
->>>>>>> 19478cb5094be8d975b0510fb969f515eca07760
+
   status = 200
