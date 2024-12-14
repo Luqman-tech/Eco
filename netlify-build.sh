@@ -15,5 +15,4 @@ npm ci
 # Build the project
 npm run build
 
-# Optional: Verify build output
-ls -la .next
+# Opt
