@@ -1,28 +1,5 @@
-
 [build]
-  command = "bash ./netlify-build.sh"
-  publish = ".next"
-
-[build.environment]
-  NODE_VERSION = "18.18.0"
-  NPM_VERSION = "9.5.0"
-    # Add any additional environment variables
-  NEXT_PUBLIC_SITE_NAME = "Eco Thrive"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-[build]
-  command = "bash ./netlify-build.sh"
+  command = "npm run build"
   publish = ".next"
 
 [build.environment]
@@ -41,5 +18,4 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-
   status = 200
