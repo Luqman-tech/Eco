@@ -3,18 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Optional: Page configurations
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }
-    ];
-  },
-
-  // Optional: Handle build warnings
+  // Optional: Error handling and build configurations
   typescript: {
     ignoreBuildErrors: true
   },
@@ -27,6 +16,17 @@ const nextConfig = {
       tls: false 
     };
     return config;
+  },
+
+  // Optional: Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      }
+    ];
   }
 };
 
