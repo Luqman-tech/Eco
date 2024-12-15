@@ -1,36 +1,32 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  output: 'standalone',
-  
-  // Error handling
-  typescript: {
-    ignoreBuildErrors: true
-  },
+#!/bin/bash
 
-  // Webpack configuration
-  webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false,
-      net: false,
-      tls: false 
-    };
-    return config;
-  },
+# Strict error handling
+set -euo pipefail
 
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }
-    ];
-  },
+# Print environment info
+echo "Build Environment:"
+echo "Node.js version: $(node --version)"
+echo "npm version: $(npm --version)"
 
-  // Page extensions
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-};
+# Set memory limit
+export NODE_OPTIONS='--max_old_space_size=4096'
 
-module.exports = nextConfig;
+# Clean npm cache
+npm cache clean --force
+
+# Remove existing node_modules
+rm -rf node_modules
+
+# Install dependencies
+npm install
+
+# List pages for verification
+echo "Available Pages:"
+find pages -type f -name "*.js"
+
+# Run build with verbose output
+npm run build
+
+# Verify build output
+echo "Build Output:"
+ls -la .next/server/pages
