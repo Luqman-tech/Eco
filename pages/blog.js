@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export default function Blog() {
+const Blog = () => {
     return (
 <>
         <Head>
@@ -364,6 +364,6 @@ export default function Blog() {
         </>
         <Script src="public/js/main.js "></Script>
 </> 
-    ) 
-}
-export default Blog
+    ); 
+};
+export default Blog;
