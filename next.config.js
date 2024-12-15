@@ -3,12 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Optional: Error handling and build configurations
+  // Error handling
   typescript: {
     ignoreBuildErrors: true
   },
 
-  // Optional: Webpack configuration
+  // Webpack configuration
   webpack: (config) => {
     config.resolve.fallback = { 
       fs: false,
@@ -18,7 +18,7 @@ const nextConfig = {
     return config;
   },
 
-  // Optional: Redirects
+  // Redirects
   async redirects() {
     return [
       {
@@ -27,7 +27,10 @@ const nextConfig = {
         permanent: true,
       }
     ];
-  }
+  },
+
+  // Page extensions
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
 };
 
 module.exports = nextConfig;
