@@ -1,17 +1,26 @@
 {
-  "name": "ecothriveafricawebsite",
+  "name": "ecothrivesite",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.2.0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "jshint": "^2.13.6"
+    "next": "14.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
+    "style-loader": "^3.3.3"
+  },
+  "engines": {
+    "node": "18.18.0",
+    "npm": "9.5.0"
   }
 }
