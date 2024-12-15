@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export default function Services() {
+const Services = () => {
     return (
         <>
         <Head>
@@ -303,6 +303,7 @@ export default function Services() {
 </>
 <Script src="public/js/main.js "></Script>
         </>
-        )    
-}
+        ); 
+};
 
+export default Services;
