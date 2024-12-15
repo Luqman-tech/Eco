@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Remove cssModules option
+  // Configure public directory
+  publicRuntimeConfig: {
+    staticFolder: '/public'
+  },
+
+  // Optional: webpack configuration
   webpack: (config) => {
     config.module.rules.push({
       test: /\.css$/,
