@@ -284,11 +284,6 @@ const Home = () => {
   </footer>
   <Script src="public/js/main.js "></Script>
 </>
-                    );
-                  };    
+    );    
+};
 export default Home;
-    
-    
-
-        )    
-}
