@@ -16,10 +16,21 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "css-loader": "7.1.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
     "style-loader": "4.0.0"
+=======
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8.4.32",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^7.3.3",
+    "style-loader": "^3.3.3"
+>>>>>>> 9259bd808209359e05808f01fc1b8aa84ef84bc5
   },
   "engines": {
     "node": "18.18.0",

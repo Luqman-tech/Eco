@@ -6,7 +6,6 @@ function Error({ statusCode }) {
           ? `An error ${statusCode} occurred on server`
           : 'An error occurred on client'}
       </h1>
-      <p>We apologize for the inconvenience. Please try again later.</p>
     </div>
   );
 }

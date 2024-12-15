@@ -3,31 +3,18 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Optional: Error handling and build configurations
-  typescript: {
-    ignoreBuildErrors: true
-  },
-
-  // Optional: Webpack configuration
+  // Webpack configuration
   webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false,
-      net: false,
-      tls: false 
-    };
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader']
+    });
+
     return config;
   },
 
-  // Optional: Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }
-    ];
-  }
+  //Disable built-in CSS support
+  cssModules: false
 };
 
 module.exports = nextConfig;
