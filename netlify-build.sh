@@ -1,22 +1,26 @@
 #!/bin/bash
 
-# Ensure exact Node.js and npm versions
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# Set strict error handling
+set -euo pipefail
 
-# Use specified Node.js version
-nvm install 18.18.0
-nvm use 18.18.0
-
-# Verify versions
+# Print environment information
+echo "Node.js version:"
 node --version
+
+echo "npm version:"
 npm --version
 
 # Clear npm cache
 npm cache clean --force
 
-# Install dependencies
-npm ci
+# Remove existing node_modules
+rm -rf node_modules
+
+# Install dependencies with exact versions
+npm install --save-exact
 
 # Build the project
 npm run build
+
+# Verify build output
+ls -la .next

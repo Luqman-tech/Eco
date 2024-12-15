@@ -11,6 +11,17 @@ const nextConfig = {
       tls: false 
     };
     return config;
+  },
+
+  // Optional: Redirect configurations
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      }
+    ];
   }
 };
 
