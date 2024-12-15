@@ -3,30 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Error handling
-  typescript: {
-    ignoreBuildErrors: true
-  },
-
-  // Webpack configuration
+  // CSS Modules support
   webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false,
-      net: false,
-      tls: false 
-    };
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    });
     return config;
-  },
-
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }
-    ];
   }
 };
 
