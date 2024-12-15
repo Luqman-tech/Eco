@@ -17,12 +17,16 @@ npm cache clean --force
 # Remove existing node_modules
 rm -rf node_modules
 
-# Install dependencies with exact versions
-npm ci
+# Install dependencies 
+# Use npm install instead of npm ci
+npm install --legacy-peer-deps
+
+# Generate package-lock.json
+npm shrinkwrap
 
 # Verify configuration files
 echo "PostCSS Configuration:"
-cat postcss.config.js
+cat postcss.config.js || echo "No PostCSS config found"
 
 echo "Next.js Configuration:"
 cat next.config.js
