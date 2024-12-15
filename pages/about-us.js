@@ -47,27 +47,27 @@ const About = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a href="about us.js" className="nav-link">
+          <a href="/about-us" className="nav-link">
             About 
           </a>
         </li>
         <li className="nav-item">
-          <a href="projects.js" className="nav-link">
+          <a href="/projects" className="nav-link">
             Projects
           </a>
         </li>
         <li className="nav-item">
-          <a href="services.js" className="nav-link">
+          <a href="/services" className="nav-link">
             Services
           </a>
         </li>
         <li className="nav-item">
-          <a href="blog.js" className="nav-link">
+          <a href="/blog" className="nav-link">
             Blog
           </a>
         </li>
         <li className="nav-item">
-          <a href="contact us.js" className="nav-link">
+          <a href="/contact-us" className="nav-link">
             Contact 
           </a>
         </li>
