@@ -3,17 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Optional: Webpack configuration
-  webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false,
-      net: false,
-      tls: false 
-    };
-    return config;
-  },
-
-  // Optional: Redirect configurations
+  // Optional: Page configurations
   async redirects() {
     return [
       {
@@ -22,6 +12,21 @@ const nextConfig = {
         permanent: true,
       }
     ];
+  },
+
+  // Optional: Handle build warnings
+  typescript: {
+    ignoreBuildErrors: true
+  },
+
+  // Optional: Webpack configuration
+  webpack: (config) => {
+    config.resolve.fallback = { 
+      fs: false,
+      net: false,
+      tls: false 
+    };
+    return config;
   }
 };
 

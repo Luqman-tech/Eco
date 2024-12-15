@@ -16,11 +16,11 @@ npm cache clean --force
 # Remove existing node_modules
 rm -rf node_modules
 
-# Install dependencies with exact versions
-npm install --save-exact
+# Install dependencies
+npm install
 
-# Build the project
-npm run build
+# Build the project with verbose output
+NODE_OPTIONS='--max_old_space_size=4096' npm run build
 
 # Verify build output
-ls -la .next
+ls -la .next/server/pages
