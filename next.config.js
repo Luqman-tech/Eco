@@ -13,7 +13,7 @@ const nextConfig = {
     return config;
   },
 
-  //Disable built-in CSS support
+  // Disable built-in CSS support
   cssModules: false
 };
 
