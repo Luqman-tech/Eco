@@ -5,17 +5,3 @@
 [build.environment]
   NODE_VERSION = "18.18.0"
   NPM_VERSION = "9.5.0"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
