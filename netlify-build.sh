@@ -11,18 +11,8 @@ echo "npm version: $(npm --version)"
 # Set memory limit
 export NODE_OPTIONS='--max_old_space_size=4096'
 
-# Clean npm cache
-npm cache clean --force
-
-# Remove existing node_modules
-rm -rf node_modules
-
-# Install dependencies 
-# Use npm install instead of npm ci
-npm install --legacy-peer-deps
-
-# Generate package-lock.json
-npm shrinkwrap
+# Install dependencies
+npm install
 
 # Verify configuration files
 echo "PostCSS Configuration:"
@@ -39,10 +29,10 @@ ls -la styles
 echo "Available Pages:"
 find pages -type f -name "*.js"
 
-# Run build with verbose output and error logging
+# Run build with error handling
 npm run build || {
-  echo "Build failed. Checking CSS file:"
-  cat styles/globals.css
+  echo "Build failed. Checking blog page:"
+  cat pages/blog.js
   exit 1
 }
 
