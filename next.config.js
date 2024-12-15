@@ -5,26 +5,12 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false,
-      net: false,
-      tls: false 
-    };
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader']
+    });
+
     return config;
-  },
-
-  // Asset prefix for public files
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ecothrivesite' : '',
-
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      }
-    ];
   }
 };
 
