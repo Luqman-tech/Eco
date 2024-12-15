@@ -11,7 +11,10 @@ const nextConfig = {
     });
 
     return config;
-  }
+  },
+
+  //Disable built-in CSS support
+  cssModules: false
 };
 
 module.exports = nextConfig;
