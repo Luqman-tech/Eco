@@ -20,12 +20,13 @@ rm -rf node_modules
 # Install dependencies
 npm install
 
+# Verify styles directory
+echo "Styles directory:"
+ls -la styles
+
 # List pages for verification
 echo "Available Pages:"
 find pages -type f -name "*.js"
-
-# Validate Next.js configuration
-node -e "require('./next.config.js')"
 
 # Run build with verbose output
 npm run build
