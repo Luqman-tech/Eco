@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Webpack configuration
+  // Remove cssModules option
   webpack: (config) => {
     config.module.rules.push({
       test: /\.css$/,
@@ -11,10 +11,7 @@ const nextConfig = {
     });
 
     return config;
-  },
-
-  // Disable built-in CSS support
-  cssModules: false
+  }
 };
 
 module.exports = nextConfig;
