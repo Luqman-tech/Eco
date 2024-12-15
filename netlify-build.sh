@@ -14,25 +14,12 @@ export NODE_OPTIONS='--max_old_space_size=4096'
 # Install dependencies
 npm install
 
-# Verify configuration files
-echo "PostCSS Configuration:"
-cat postcss.config.js || echo "No PostCSS config found"
-
-echo "Next.js Configuration:"
-cat next.config.js
-
-# Verify styles directory
-echo "Styles directory:"
-ls -la styles
-
-# List pages for verification
-echo "Available Pages:"
-find pages -type f -name "*.js"
-
-# Run build with error handling
+# Run build
 npm run build || {
-  echo "Build failed. Checking blog page:"
+  echo "Build failed. Checking page components:"
   cat pages/blog.js
+  cat pages/projects.js
+  cat pages/about-us.js
   exit 1
 }
 
