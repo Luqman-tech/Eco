@@ -11,6 +11,11 @@ echo "npm version: $(npm --version)"
 # Set memory limit
 export NODE_OPTIONS='--max_old_space_size=4096'
 
+# Ensure correct CSS file
+if [ -f "styles/global.css" ]; then
+  mv styles/global.css styles/globals.css
+fi
+
 # Clean npm cache
 npm cache clean --force
 
