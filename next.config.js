@@ -3,11 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   
-  // Error handling
-  typescript: {
-    ignoreBuildErrors: true
-  },
-
   // Webpack configuration
   webpack: (config) => {
     config.resolve.fallback = { 
@@ -18,7 +13,10 @@ const nextConfig = {
     return config;
   },
 
-  // Optional redirects
+  // Asset prefix for public files
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ecothrivesite' : '',
+
+  // Redirects
   async redirects() {
     return [
       {
