@@ -11,11 +11,6 @@ echo "npm version: $(npm --version)"
 # Set memory limit
 export NODE_OPTIONS='--max_old_space_size=4096'
 
-# Ensure correct CSS file
-if [ -f "styles/global.css" ]; then
-  mv styles/global.css styles/globals.css
-fi
-
 # Clean npm cache
 npm cache clean --force
 
@@ -33,8 +28,12 @@ ls -la styles
 echo "Available Pages:"
 find pages -type f -name "*.js"
 
-# Run build with verbose output
-npm run build
+# Run build with verbose output and error logging
+npm run build || {
+  echo "Build failed. Checking page contents:"
+  cat pages/projects.js
+  exit 1
+}
 
 # Verify build output
 echo "Build Output:"
