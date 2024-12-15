@@ -17,12 +17,12 @@ npm cache clean --force
 # Remove existing node_modules
 rm -rf node_modules
 
-# Install dependencies
-npm install
+# Install dependencies with exact versions
+npm ci
 
 # Verify configuration files
 echo "PostCSS Configuration:"
-cat postcss.config.js || echo "No PostCSS config found"
+cat postcss.config.js
 
 echo "Next.js Configuration:"
 cat next.config.js
