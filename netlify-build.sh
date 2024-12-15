@@ -20,6 +20,13 @@ rm -rf node_modules
 # Install dependencies
 npm install
 
+# Verify configuration files
+echo "PostCSS Configuration:"
+cat postcss.config.js || echo "No PostCSS config found"
+
+echo "Next.js Configuration:"
+cat next.config.js
+
 # Verify styles directory
 echo "Styles directory:"
 ls -la styles
@@ -28,8 +35,12 @@ ls -la styles
 echo "Available Pages:"
 find pages -type f -name "*.js"
 
-# Run build with verbose output
-npm run build
+# Run build with verbose output and error logging
+npm run build || {
+  echo "Build failed. Checking CSS file:"
+  cat styles/globals.css
+  exit 1
+}
 
 # Verify build output
 echo "Build Output:"
