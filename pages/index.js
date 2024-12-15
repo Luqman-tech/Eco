@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export default function Home() {
+const Home = () => {
     return (
 <>
 <Head>
@@ -284,6 +284,11 @@ export default function Home() {
   </footer>
   <Script src="public/js/main.js "></Script>
 </>
+                    );
+                  };    
+export default Home;
+    
+    
 
         )    
 }
