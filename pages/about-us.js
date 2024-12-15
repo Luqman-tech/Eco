@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export default function About() {
+const About = () => {
     return (
         <>
         <Head>
@@ -275,7 +275,7 @@ export default function About() {
 
   <Script src="ecothrivesite/public/js/main.js "></Script>
 </>
-    )
-}
+    );
+};
 
-export default Home
+export default About
