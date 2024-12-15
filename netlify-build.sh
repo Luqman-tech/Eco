@@ -28,12 +28,8 @@ ls -la styles
 echo "Available Pages:"
 find pages -type f -name "*.js"
 
-# Run build with verbose output and error logging
-npm run build || {
-  echo "Build failed. Checking page contents:"
-  cat pages/projects.js
-  exit 1
-}
+# Run build with verbose output
+npm run build
 
 # Verify build output
 echo "Build Output:"
