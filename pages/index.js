@@ -284,6 +284,8 @@ const Home = () => {
     </div>
   </footer>
   <Script src="public/js/main.js "></Script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </>
     );    
 };
